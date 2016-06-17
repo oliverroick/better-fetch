@@ -23,7 +23,21 @@ request('http://example.com/').then(
     // handle error response
   }
 );
+```
 
+Both `success` and `error` are `Objects` that have the following members:
+
+| Member            | Type          | Description                          |
+| ----------------- | ------------- | ------------------------------------ |
+| `status`          | `int`         | The HTTP status code, e.g. `200`     |
+| `statusText`      | `String`      | The HTTP status, e.g. `OK`           |
+
+```
+{
+  status: client.status,
+  statusText: client.statusText,
+  content,
+}
 ```
 
 ### POST example
