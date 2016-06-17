@@ -29,16 +29,9 @@ Both `success` and `error` are `Objects` that have the following members:
 
 | Member            | Type          | Description                          |
 | ----------------- | ------------- | ------------------------------------ |
-| `status`          | `int`         | The HTTP status code, e.g. `200`     |
-| `statusText`      | `String`      | The HTTP status, e.g. `OK`           |
-
-```
-{
-  status: client.status,
-  statusText: client.statusText,
-  content,
-}
-```
+| `status`          | `int`         | HTTP status code, e.g. `200`         |
+| `statusText`      | `String`      | HTTP status, e.g. `OK`               |
+| `content`         | `String` or `Object`| The HTTP response. If the response is of content type `application/json`, the response will be parsed into an an `Object`, otherwise it's a `String`  |
 
 ### POST example
 
